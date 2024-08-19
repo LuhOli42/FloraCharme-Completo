@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora Charme cosméticos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles/pages/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script type="module" src="../js/login.js" defer></script>
+  </head>
+  <body>
+    <%- include("partials/mobile_nav") %> <%- include("partials/header") %>
+
+    <main class="main">
+      <%- include('partials/mobile_logo') %>
+
+      <section class="login">
+        <h2 class="login__titulo">• Login</h2>
+        <form
+          id="login__form"
+          method="post"
+          action="<% `${process.env.BACKEND_SERVER_URL}:${process.env.PORT_BACKEND}/login` %>"
+        >
+          <p class="paragrafo__erro disable">
+            Usuario ou senha invalidos, ou tente cadastrar um novo suario
+          </p>
+
+          <div class="login__container">
+            <div class="login__cabecario">
+              <h3 class="login__cabecario-titulo">Email</h3>
+              <input
+                type="text"
+                name="email"
+                class="login__cabecario-input"
+                id="email"
+                placeholder="Digite seu email"
+              />
+            </div>
+            <div class="login__cabecario">
+              <h3 class="login__cabecario-titulo">Senha</h3>
+              <input
+                type="password"
+                name="senha"
+                class="login__cabecario-input"
+                id="senha"
+                type="password"
+                placeholder="Digite sua senha"
+              />
+            </div>
+            <div class="login__btns">
+              <button class="login__btn login__btn-secundario">
+                <a href="/cadastro">Cadastre-se</a>
+              </button>
+
+              <input
+                type="submit"
+                value="Login"
+                class="login__btn login__btn-login"
+              />
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>

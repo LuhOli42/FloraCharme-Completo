@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora Charme cosméticos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles/pages/cadastro.css" />
+
+    <script type="module" src="../js/formsCadastro.js" defer></script>
+  </head>
+  <body>
+    <%- include("partials/mobile_nav") %> <%- include("partials/header") %>
+
+    <main class="main">
+      <%- include('partials/mobile_logo') %>
+
+      <section class="cadastro">
+        <h2 class="cadastro__titulo">• Cadastro</h2>
+        <div class="cadastro__container">
+          <!-- <div class="cadastro__input-foto">
+            <div class="cadastro__foto">
+              <video
+                src=""
+                autoplay
+                class="cadastro__foto-background cadastro__camera"
+              ></video>
+              <canvas
+                class="cadastro__foto-background cadastro__canvas disable"
+              ></canvas>
+            </div>
+            <button class="cadastro__foto-btn cadastro__abrir-camera">
+              Abrir camera
+            </button>
+            <button class="cadastro__foto-btn cadastro__tirar-foto disable">
+              Tirar foto
+            </button>
+          </div> -->
+          <form class="cadastro__input-texto" data-formulario>
+            <div class="cadastro__container-cabecario-input">
+              <h3 class="cadastro__cabecario-titulo" for="nome">Nome</h3>
+              <input
+                name="nome"
+                id="nome"
+                type="text"
+                class="cadastro__cabecario-input"
+                minlength="3"
+                required
+                id="nome"
+              />
+            </div>
+            <div class="cadastro__container-cabecario-input">
+              <h3 class="cadastro__cabecario-titulo">Email</h3>
+              <input
+                class="cadastro__cabecario-input"
+                type="email"
+                minlength="4"
+                id="email"
+              />
+            </div>
+            <div class="cadastro__container-cabecario-input">
+              <h3 class="cadastro__cabecario-titulo">Senha</h3>
+              <input
+                class="cadastro__cabecario-input"
+                type="password"
+                minlength="4"
+                required
+                id="senha"
+              />
+            </div>
+            <div class="cadastro__container-cabecario-input">
+              <h3 class="cadastro__cabecario-titulo">Telefone</h3>
+              <input
+                type="number"
+                class="cadastro__cabecario-input"
+                minlength="9"
+                minlength="12"
+                id="telefone"
+              />
+            </div>
+            <div class="cadastro__container-cabecario-input">
+              <h3 class="cadastro__cabecario-titulo">CEP</h3>
+              <input
+                type="number"
+                class="cadastro__cabecario-input"
+                minlength="8"
+                maxlength="8"
+                id="cep"
+              />
+            </div>
+            <div class="cadastro__container-cabecario-input">
+              <h3 class="cadastro__cabecario-titulo">Endereço</h3>
+              <input
+                type="text"
+                class="cadastro__cabecario-input"
+                minlength="3"
+                id="endereco"
+              />
+            </div>
+            <div class="cadastro__container-cabecario-input">
+              <h3 class="cadastro__cabecario-titulo">Complemento</h3>
+              <input
+                type="text"
+                class="cadastro__cabecario-input"
+                id="complemento"
+              />
+            </div>
+            <button class="cadastro__btn-submit" type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+.mobile__nav-bar-tablet {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile__nav-bar-tablet {
+    display: block;
+  }
+
+  .tablet__header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: var(--fc-color-brand-200);
+    justify-content: space-between;
+    padding: 0 calc(100vw * 0.12);
+  }
+
+  .container__tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 52px;
+  }
+
+  .tablet__logo-icon:hover {
+    filter: brightness(80%);
+  }
+
+  .tablet__logo-icon:active {
+    filter: brightness(50%);
+  }
+
+  .tablet__logo-icon:focus {
+    filter: brightness(40%);
+  }
+
+  .tablet__menu-hamburguer {
+    display: inline-block;
+    margin-top: 8px;
+  }
+
+  .tablet__perfil-icon:hover {
+    filter: brightness(80%);
+  }
+
+  .tablet__perfil-icon:active {
+    filter: brightness(50%);
+  }
+
+  .tablet__perfil-icon:focus {
+    filter: brightness(40%);
+  }
+
+  .tablet__menu-hamburguer:hover {
+    filter: brightness(80%);
+  }
+
+  .tablet__menu-hamburguer:active {
+    filter: brightness(50%);
+  }
+
+  .tablet__menu-hamburguer:focus {
+    filter: brightness(40%);
+  }
+
+  .tablet-menu-hamburguer__botao {
+    display: none;
+  }
+
+  .tablet-lista-menu {
+    display: none;
+    position: absolute;
+    padding: 40px 40px 0px;
+    border-radius: 23px;
+    top: 80px;
+    right: 5%;
+    background-color: var(--fc-color-brand-200);
+  }
+
+  .tablet-lista-menu__item {
+    font-size: var(--fc-font-size-body-lg);
+    padding-bottom: 40px;
+  }
+
+  .tablet-lista-menu__item a {
+    text-decoration: none;
+    color: var(--fc-color-brand-600);
+    font-family: var(--fc-font-type-primary);
+  }
+
+  .tablet-lista-menu__item a:hover {
+    color: var(--fc-color-brand-800);
+  }
+
+  .tablet-lista-menu__item a:active {
+    color: var(--fc-color-brand-900);
+  }
+
+  .tablet-lista-menu__item a:focus {
+    color: var(--fc-color-brand-950);
+  }
+
+  .tablet-menu-hamburguer__botao:checked ~ .tablet-lista-menu {
+    display: block;
+  }
+
+  .tablet-menu-hamburguer__botao:checked ~ .tablet__icons {
+    filter: brightness(20%);
+  }
+
+  .tablet__btns {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    position: fixed;
+    right: 24px;
+    bottom: 64px;
+    gap: 32px;
+  }
+
+  .tablet__btn {
+    background-color: var(--fc-color-brand-700);
+    border: none;
+    box-shadow: var(--fc-shadow-highlight-light);
+    height: 80px;
+    border-radius: 104px;
+  }
+
+  .tablet__btn:hover {
+    background-color: var(--fc-color-brand-800);
+  }
+
+  .table__btn:active {
+    background-color: var(--fc-color-brand-900);
+  }
+
+  .tablet__btn:focus {
+    background-color: var(--fc-color-brand-950);
+  }
+
+  .tablet__btns img {
+    filter: brightness(0%) contrast(100%) invert(100%) sepia(18%)
+      saturate(2450%) hue-rotate(292deg) brightness(98%) contrast(92%);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .mobile__nav-bar-tablet {
+    display: none;
+  }
+}

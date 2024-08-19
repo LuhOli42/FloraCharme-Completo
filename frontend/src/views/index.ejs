@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora Charme cosméticos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/styles/pages/home.css" />
+    <script src="./js/script.js" type="modules" defer></script>
+    <script type="module" src="./js/btnsLancamento.js" defer></script>
+    <script type="module" src="./js/btnsCarrinho.js" defer></script>
+    <script type="module" src="./js/btnsFavoritos.js" defer></script>
+    <script type="module" src="../js/btnMaisInfos.js" defer></script>
+    <script type="module" src="./js/btnPopVoltar.js" defer></script>
+  </head>
+  <body>
+    <%- include("partials/mobile_nav") %> <%- include("partials/header") %>
+    <main class="main">
+      <%- include('partials/mobile_logo') %> <%-
+      include("partials/popup_carrinho") %> <%-
+      include("partials/popup_favorito") %>
+      <section class="lancamentos" id="lancamentos">
+        <h2 class="lancamentos__titulo">• Lançamentos</h2>
+
+        <div class="lancamentos__container">
+          <p class="lancamentos__id"><%- lancamento._id %></p>
+          <p class="lancamentos__produto"><%- lancamento.nome %></p>
+          <p class="lancamento__descricao"><%- lancamento.descricao %></p>
+          <hr />
+          <p class="lancamentos__preco">
+            R$: <%- lancamento.valor.toFixed(2) %>
+          </p>
+          <p class="lancamentos__titulo-ano">
+            <%- new Date(lancamento.created_at).getFullYear() %>
+          </p>
+          <p class="lancamentos__categoria"><%- lancamento.categoria %></p>
+        </div>
+
+        <div class="lancamentos__container-imagem">
+          <img
+            src="<%- lancamento.img_url %>"
+            alt="<%- lancamento.nome %>"
+            class="lancamentos__imagem"
+          />
+          <ul class="lancamentos__btns">
+            <li>
+              <button
+                class="lancamentos__btn lancamentos__btn-secundario lancamentos__btn-saiba-mais"
+              >
+                <img src="./assets/images/icons/+.png" alt="Saiba mais" />
+              </button>
+            </li>
+            <li>
+              <button
+                class="lancamentos__btn lancamentos__btn-secundario lancamentos__btn-fav"
+              >
+                <img src="./assets/images/icons/Coracao.png" alt="Favoritos" />
+              </button>
+            </li>
+            <li>
+              <button class="lancamentos__btn lancamento__btn-carrinho">
+                <img
+                  src="./assets/images/icons/Carrinho.png"
+                  alt="Carrinho"
+                  class="lancamentos__btn-carrinho"
+                />
+              </button>
+            </li>
+          </ul>
+        </div>
+        <hr class="section__hr" />
+      </section>
+
+      <section class="sobre-nos" id="sobre-nos">
+        <div class="sobre-nos__container">
+          <h2 class="sobre-nos__titulo">• Sobre-nós</h2>
+          <h3 class="sobre-nos__subtitulo">
+            Florescendo
+            <span class="sobre-nos__subtitulo-highlight">Beleza</span>
+            Sustentável
+          </h3>
+          <div class="sobre-nos__container-imagem">
+            <img
+              src="./assets/images/produtos/brooke-lark-hp3MgIy-uEI-unsplash.jpg"
+              alt="Buque de flores feito com comésticos da marca"
+              class="sobre-nos__imagem"
+            />
+          </div>
+        </div>
+        <div class="sobre-nos__container">
+          <p class="sobre-nos__texto">
+            Em um mundo onde a beleza se entrelaça com a consciência ambiental,
+            nasce Flora Charme, mais do que uma marca de cosméticos, uma
+            promessa de sustentabilidade e cuidado com a natureza. <br />
+            Nossa jornada começa nos exuberantes campos floridos, onde a
+            inspiração floresce em cada pétala. Com um compromisso inabalável
+            com a preservação do meio ambiente, cada ingrediente é
+            cuidadosamente selecionado, cultivado de forma ética e colhido com
+            respeito à biodiversidade.
+          </p>
+          <button class="sobre-nos__botao-leia-mais">
+            <a href="/sobre-nos">Leia mais</a>
+          </button>
+        </div>
+        <hr class="section__hr" />
+      </section>
+
+      <section class="produtos" id="produtos">
+        <h2 class="produtos__titulo">• Produtos</h2>
+
+        <ol class="produtos__lista">
+          <% for (let i = 1; i < produtos.length; i++) { %>
+          <li class="produtos__card">
+            <div class="produtos__card-container app__produto-descricao">
+              <p class="produto__id"><%- produtos[i]._id %></p>
+              <h3 class="produto__titulo"><%- produtos[i].nome %></h3>
+              <p class="produto__descricao"><%- produtos[i].descricao %></p>
+              <p class="produto__preco">
+                R$ <%- produtos[i].valor.toFixed(2) %>
+              </p>
+              <p class="produto__categoria"><%- produtos[i].categoria %></p>
+            </div>
+            <div class="produtos__card-container">
+              <div class="produtos__imagem-container">
+                <img
+                  src="<%- produtos[i].img_url %>"
+                  alt="<%- produtos[i].nome %>"
+                  class="app__produto-img"
+                />
+              </div>
+              <ul class="produtos__btns">
+                <li>
+                  <button
+                    class="produtos__btn produtos__btn-secundario app__produto-saiba-mais"
+                  >
+                    <img src="./assets/images/icons/+.png" alt="Saiba mais" />
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="produtos__btn produtos__btn-secundario app__produto-favorito"
+                  >
+                    <img
+                      src="./assets/images/icons/Coracao.png"
+                      alt="Favoritos"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button class="produtos__btn app__produto-carrinho">
+                    <img
+                      src="./assets/images/icons/Carrinho.png"
+                      alt="Carrinho"
+                      class="produtos__btn-carrinho"
+                    />
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <% } %>
+        </ol>
+
+        <hr class="section__hr" />
+      </section>
+
+      <section class="clientes" id="clientes">
+        <h2 class="clientes__titulo">
+          <span class="clientes__titulo-bolinha">&#9679;</span>Nossos Clientes
+        </h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="clientes__card">
+                <div class="clientes__card-texto-container">
+                  <div class="clientes__card-container-estrelas">
+                    <p class="clientes__card-estrelas">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </p>
+                    <p class="clientes__card-produto-nome">Creme para pele</p>
+                  </div>
+
+                  <h3 class="clientes__card-nome">Luiza Ferreira</h3>
+                  <p class="clientes__card-avaliacao">
+                    Produto suave, cheiroso e espalha bem na pele. Alta
+                    qualidade, embalagem sustentável.
+                  </p>
+                </div>
+                <div class="clientes__card-imagem-container">
+                  <img
+                    src="./assets/images/clientes/luiza_ferreira.jpeg"
+                    alt="Imagem da Luiza"
+                    class="clientes__card-imagem"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="clientes__card">
+                <div class="clientes__card-texto-container">
+                  <div class="clientes__card-container-estrelas">
+                    <p class="clientes__card-estrelas">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </p>
+                    <p class="clientes__card-produto-nome">Perfume capivara</p>
+                  </div>
+
+                  <h3 class="clientes__card-nome">Lua Silva</h3>
+                  <p class="clientes__card-avaliacao">
+                    Produto suave e cheiroso. Alta qualidade, embalagem fofinha.
+                  </p>
+                </div>
+                <div class="clientes__card-imagem-container">
+                  <img
+                    src="./assets/images/clientes/cliente3.jpeg"
+                    alt="Imagem da Luiza"
+                    class="clientes__card-imagem"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="clientes__card">
+                <div class="clientes__card-texto-container">
+                  <div class="clientes__card-container-estrelas">
+                    <p class="clientes__card-estrelas">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </p>
+                    <p class="clientes__card-produto-nome">Base neutra</p>
+                  </div>
+
+                  <h3 class="clientes__card-nome">Maria Aparecida</h3>
+                  <p class="clientes__card-avaliacao">
+                    Produto suave, cheiroso e espalha bem na pele. Alta
+                    qualidade, embalagem sustentável.
+                  </p>
+                </div>
+                <div class="clientes__card-imagem-container">
+                  <img
+                    src="./assets/images/clientes/cliente2.jpeg"
+                    alt="Imagem da Luiza"
+                    class="clientes__card-imagem"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>

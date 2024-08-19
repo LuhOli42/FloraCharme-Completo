@@ -1,0 +1,100 @@
+.clientes {
+  display: none;
+  padding: 2em;
+}
+
+.clientes__titulo {
+  display: flex;
+  list-style-type: circle;
+  font-weight: 600;
+  font-size: 2em;
+  color: var(--cor-creme-escuro);
+  font-family: var(--font-principal);
+}
+
+.clientes__titulo-bolinha {
+  font-size: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.3em;
+}
+
+.clientes__card {
+  border-radius: 2em;
+  height: 50%;
+  width: 60%;
+  padding: 2em;
+  background-color: var(--cor-card);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  margin-left: 5%;
+}
+
+.clientes__card-texto-container {
+  width: 50%;
+  line-height: 1.6em;
+  font-family: var(--font-secundaria);
+}
+
+.clientes__card-produto-nome {
+  color: var(--cor-creme-escuro);
+  font-weight: 600;
+}
+
+.clientes__card-nome {
+  font-family: var(--font-principal);
+  font-size: 1.5em;
+  padding: 1em 0;
+}
+
+.clientes__card-imagem-container {
+  width: 40%;
+  height: 30%;
+}
+
+.clientes__card-estrelas {
+  color: var(--cor-estrelas);
+  font-size: 1em;
+}
+
+.clientes__card-imagem {
+  border-radius: 14em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.clientes .swiper {
+  padding-top: 2em;
+  padding-left: 2em;
+}
+.clientes .clientes .swiper-wrapper {
+  padding-top: 2em;
+  align-items: center;
+  gap: 10px;
+}
+
+.clientes .swiper-slide {
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 1024px) {
+  .clientes {
+    padding: 4em;
+  }
+  .clientes__titulo {
+    font-size: 4em;
+  }
+  .clientes__card {
+    padding: 3em 5em;
+    margin-left: 10%;
+    margin-top: 1em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .clientes {
+    padding: 4em 15em;
+  }
+}

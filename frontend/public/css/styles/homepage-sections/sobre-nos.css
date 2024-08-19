@@ -1,0 +1,136 @@
+.sobre-nos {
+  padding-top: 32px;
+}
+
+.sobre-nos__titulo {
+  font-family: var(--fc-font-type-primary);
+  font-size: var(--fc-font-size-heading-sm);
+  color: var(--fc-color-brand-950);
+}
+
+.sobre-nos__subtitulo {
+  font-family: var(--fc-font-type-primary);
+  padding: 16px 0;
+  text-align: center;
+  font-size: var(--fc-font-size-body-md);
+  color: var(--fc-color-brand-950);
+}
+
+.sobre-nos__subtitulo-highlight {
+  color: var(--fc-color-brand-900);
+}
+
+.sobre-nos__container-imagem {
+  height: calc((100vw - 40px) * 0.55);
+  padding-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sobre-nos__imagem {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sobre-nos__texto {
+  text-align: justify;
+  font-family: var(--fc-font-type-primary);
+  color: var(--fc-color-brand-950);
+  line-height: var(--fc-font-line-height-body);
+  font-size: var(--fc-font-size-body-sm);
+  padding-bottom: 16px;
+}
+
+.sobre-nos__botao-leia-mais {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 18px;
+  border: none;
+  background-color: var(--fc-color-brand-700);
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.sobre-nos__botao-leia-mais:hover {
+  background-color: var(--fc-color-brand-800);
+}
+
+.sobre-nos__botao-leia-mais:active {
+  background-color: var(--fc-color-brand-900);
+}
+
+.sobre-nos__botao-leia-mais:focus {
+  background-color: var(--fc-color-brand-950);
+}
+
+.sobre-nos__botao-leia-mais a {
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  font-family: var(--fc-font-type-primary);
+  color: var(--fc-color-brand-50);
+}
+
+.sobre-nos .section__hr {
+  border: 1px solid var(--fc-color-brand-900);
+  margin-top: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .sobre-nos {
+    padding-top: 32px;
+  }
+
+  .sobre-nos__titulo {
+    font-size: var(--fc-font-size-heading-md);
+  }
+  .sobre-nos__subtitulo {
+    font-size: var(--fc-font-size-heading-xs);
+  }
+
+  .sobre-nos__container-imagem {
+    height: 354px;
+    width: 562px;
+  }
+
+  .sobre-nos__texto {
+    font-size: var(--fc-font-size-body-md);
+  }
+
+  .sobre-nos__botao-leia-mais {
+    margin: 16px auto;
+    width: 348px;
+    height: 52px;
+  }
+  .sobre-nos .section__hr {
+    margin-top: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .sobre-nos {
+    padding-top: 64px;
+  }
+
+  .sobre-nos__titulo {
+    font-size: var(--fc-font-size-heading-xl);
+  }
+  .sobre-nos__subtitulo {
+    padding: 32px 0;
+    font-size: var(--fc-font-size-heading-sm);
+  }
+  .sobre-nos__container-imagem {
+    height: 484px;
+    width: 804px;
+  }
+  .sobre-nos__texto {
+    padding: 32px 0;
+    font-size: var(--fc-font-size-body-lg);
+  }
+  .sobre-nos .section__hr {
+    margin-top: 64px;
+  }
+}

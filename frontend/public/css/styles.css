@@ -1,0 +1,67 @@
+@import url("./styles/nav-header/nav-bar-smartphone.css");
+@import url("./styles/nav-header/nav-bar-tablet.css");
+@import url("./styles/nav-header/header.css");
+@import url("./styles/footer/footer.css");
+
+:root {
+  /* cores */
+  --fc-color-brand-50: #fbf6ea;
+  --fc-color-brand-100: #f7eed8;
+  --fc-color-brand-200: #f0dedb;
+  --fc-color-brand-300: #e4c1bd;
+  --fc-color-brand-400: #d59c97;
+  --fc-color-brand-500: #c27571;
+  --fc-color-brand-600: #9f4e4e;
+  --fc-color-brand-700: #8e4244;
+  --fc-color-brand-800: #78393d;
+  --fc-color-brand-900: #673439;
+  --fc-color-brand-950: #38191b;
+
+  --fc-color-warning-sucess-600: #2dc40b;
+  --fc-color-warning-alert-400: #fadb25;
+  --fc-color-warning-alert-500: #f4bd0c;
+  --fc-color-warning-error-700: #d71300;
+
+  /* fonts */
+  --fc-font-type-primary: "Inter", sans-serif;
+
+  --fc-font-size-body-lg: 20px;
+  --fc-font-size-body-md: 16px;
+  --fc-font-size-body-sm: 13px;
+
+  --fc-font-size-heading-xl: 61px;
+  --fc-font-size-heading-lg: 49px;
+  --fc-font-size-heading-md: 39px;
+  --fc-font-size-heading-sm: 31px;
+  --fc-font-size-heading-xs: 25px;
+
+  --fc-font-line-height-heading: normal;
+  --fc-font-line-height-body: 150%;
+
+  /* shadows */
+
+  --fc-shadow-depth-light: 0px 8px 0px 8px rgb(0, 0, 0, 0.16);
+  --fc-shadow-depth-heavy: 0px 16px 0px 8px rgb(0, 0, 0, 0.32);
+  --fc-shadow-highlight-light: 1px 1px 0px 1px rgb(0, 0, 0, 0.04);
+  --fc-shadow-highlight-heavy: 1px 1px 0px 1px rgb(0, 0, 0, 0.08);
+}
+
+.main {
+  padding: 0 calc(100vw * 0.05);
+}
+
+.main-logo {
+  display: flex;
+  margin: auto;
+  padding: 32px 0;
+  width: 60%;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    padding: 0 calc(100vw * 0.12);
+  }
+  .main-logo {
+    display: none;
+  }
+}

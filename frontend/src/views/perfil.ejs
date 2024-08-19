@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora Charme cosméticos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles/pages/perfil.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="../js/perfil.js" defer></script>
+  </head>
+  <body>
+    <%- include("partials/mobile_nav") %> <%- include("partials/header") %>
+
+    <main class="main">
+      <%- include('partials/mobile_logo') %>
+
+      <section class="perfil">
+        <h2 class="perfil__titulo">• Perfil</h2>
+        <div class="perfil__container">
+          <!-- <div class="perfil__input-foto">
+            <div class="perfil__foto">
+              <img
+                src=""
+                alt="Imagem do usuario"
+                class="perfil__foto-background"
+              />
+            </div>
+            <div class="perfil__btn-container">
+              <button class="perfil__foto-btn">
+                <a href="/favoritos">Favoritos</a>
+              </button>
+              <button class="perfil__foto-btn">
+                <a href="./carrinho">Carrinho</a>
+              </button>
+              <button class="perfil__foto-btn">
+                <a href="./comprasFinalizadas">Compras Finalizadas</a>
+              </button>
+            </div>
+          </div> -->
+          <div class="perfil__input-texto">
+            <div class="perfil__container-cabecario-input">
+              <h3 class="perfil__cabecario-titulo">Nome</h3>
+              <div class="perfil__cabecario-texto">
+                <p class="perfil__nome">Campo vazio</p>
+              </div>
+            </div>
+            <div class="perfil__container-cabecario-input">
+              <h3 class="perfil__cabecario-titulo">Email</h3>
+              <div class="perfil__cabecario-texto">
+                <p class="perfil__email">Campo vazio</p>
+              </div>
+            </div>
+            <div class="perfil__container-cabecario-input">
+              <h3 class="perfil__cabecario-titulo">Telefone</h3>
+              <div class="perfil__cabecario-texto">
+                <p class="perfil__telefone">Campo vazio</p>
+              </div>
+            </div>
+            <div class="perfil__container-cabecario-input">
+              <h3 class="perfil__cabecario-titulo">CEP</h3>
+              <div class="perfil__cabecario-texto">
+                <p class="perfil__cep">Campo vazio</p>
+              </div>
+            </div>
+            <div class="perfil__container-cabecario-input">
+              <h3 class="perfil__cabecario-titulo">Endereço</h3>
+              <div class="perfil__cabecario-texto">
+                <p class="perfil__endereco">Campo vazio</p>
+              </div>
+            </div>
+            <div class="perfil__container-cabecario-input">
+              <h3 class="perfil__cabecario-titulo">Complemento</h3>
+              <div class="perfil__cabecario-texto">
+                <p class="perfil__complemento">Campo vazio</p>
+              </div>
+            </div>
+            <button class="perfil__btn-submit">Sair</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>

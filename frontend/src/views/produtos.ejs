@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora Charme cosméticos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles/pages/produtos.css" />
+
+    <script
+      type="module"
+      src="../js/acharProdutoLocalStorage.js"
+      defer
+    ></script>
+    <script type="module" src="../js/btnsCarrinho.js" defer></script>
+    <script type="module" src="../js/btnsFavoritos.js" defer></script>
+    <script type="module" src="../js/btnPopVoltar.js" defer></script>
+    <script type="module" src="../js/btnMaisInfos.js" defer></script>
+    <script type="module" src="../js/btnFiltros.js" defer></script>
+  </head>
+  <body>
+    <%- include("partials/mobile_nav") %> <%- include("partials/header") %>
+
+    <main class="main">
+      <%- include('partials/mobile_logo') %>
+      <section class="produtos">
+        <%- include("partials/popup_carrinho") %> <%-
+        include("partials/popup_favorito") %>
+        <h2 class="produtos__titulo">• Produtos</h2>
+
+        <div class="produtos__filtro-container">
+          <h3 class="produtos__subtitulo">Filtrar:</h3>
+          <button class="filtros_btn filtros_btn-bases">Bases</button>
+          <button class="filtros_btn filtros_btn-perfumes">Perfumes</button>
+          <button class="filtros_btn filtros_btn-batom">Batom</button>
+          <button class="filtros_btn filtros_btn-Cremes">Cremes</button>
+          <button class="filtros_btn filtros_btn-todos">Todos</button>
+        </div>
+
+        <ol class="produtos__lista">
+          <% for (let i = 0; i < produtos.length; i++) { %>
+
+          <li class="produtos__card">
+            <div class="produtos__card-container app__produto-descricao">
+              <p class="produto__id"><%- produtos[i]._id %></p>
+              <h3 class="produto__titulo"><%- produtos[i].nome %></h3>
+              <p class="produto__descricao"><%- produtos[i].descricao %></p>
+              <p class="produto__preco">
+                R$: <%- produtos[i].valor.toFixed(2) %>
+              </p>
+              <p class="produto__categoria"><%- produtos[i].categoria %></p>
+            </div>
+            <div class="produtos__card-container">
+              <div class="produtos__imagem-container">
+                <img
+                  src="<%- produtos[i].img_url %>"
+                  alt="Creme de mão limons hand's"
+                  class="app__produto-img"
+                />
+              </div>
+              <ul class="produtos__btns">
+                <li>
+                  <button
+                    class="produtos__btn produtos__btn-secundario app__produto-saiba-mais"
+                  >
+                    <img src="../assets/images/icons/+.png" alt="Saiba mais" />
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="produtos__btn produtos__btn-secundario app__produto-favorito"
+                  >
+                    <img
+                      src="../assets/images/icons/Coracao.png"
+                      alt="Favoritos"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button class="produtos__btn app__produto-carrinho">
+                    <img
+                      src="../assets/images/icons/Carrinho.png"
+                      alt="Carrinho"
+                      class="produtos__btn-carrinho"
+                    />
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <% } %>
+        </ol>
+      </section>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>

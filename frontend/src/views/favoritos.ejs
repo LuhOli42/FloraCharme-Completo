@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora Charme cosméticos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles/pages/favoritos.css" />
+    <script type="module" src="../js/favoritos.js" defer></script>
+    <script type="module" src="../js/soAcessarPaginaLogado.js" defer></script>
+    <script type="module" src="../js/btnMaisInfos.js" defer></script>
+    <script type="module" src="../js/btnPopVoltar.js" defer></script>
+    <script type="module" src="../js/btnFiltros.js" defer></script>
+    <script type="module" src="../js/btnsCarrinho.js" defer></script>
+  </head>
+  <body>
+    <%- include("partials/mobile_nav") %> <%- include("partials/header") %>
+    <main class="main">
+      <%- include('partials/mobile_logo') %>
+      <section class="favoritos">
+        <%- include("partials/popup_carrinho") %>
+
+        <h2 class="favoritos__titulo">• Favoritos</h2>
+
+        <div class="favoritos__vazio">
+          <h3 class="favoritos__vazio-subtitulo">
+            Sua lista de favoritos está vazia
+          </h3>
+          <p class="favoritos__vazio-texto">
+            Vá para a página de <a href="./produtos">produtos</a> e favorite
+            alguns produtos
+          </p>
+        </div>
+
+        <div class="produtos__favoritos-main disable">
+          <div class="produtos__filtro-container">
+            <h3 class="produtos__subtitulo">Filtrar:</h3>
+            <button class="filtros_btn filtros_btn-bases">Bases</button>
+            <button class="filtros_btn filtros_btn-perfumes">Perfumes</button>
+            <button class="filtros_btn filtros_btn-batom">Batom</button>
+            <button class="filtros_btn filtros_btn-Cremes">Cremes</button>
+            <button class="filtros_btn filtros_btn-todos">Todos</button>
+          </div>
+
+          <ol class="produtos__lista"></ol>
+        </div>
+      </section>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>

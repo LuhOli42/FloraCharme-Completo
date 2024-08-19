@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora Charme cosméticos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/styles/pages/produto.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script type="module" src="../js/btnsCarrinho.js" defer></script>
+    <script type="module" src="../js/btnsFavoritos.js" defer></script>
+    <script type="module" src="../js/btnMaisInfos.js" defer></script>
+    <script type="module" src="../js/btnPopVoltar.js" defer></script>
+  </head>
+  <body>
+    <%- include("partials/mobile_nav") %> <%- include("partials/header") %>
+
+    <main class="main">
+      <%- include('partials/mobile_logo') %>
+
+      <section class="produto">
+        <%- include("partials/popup_carrinho") %> <%-
+        include("partials/popup_favorito") %>
+        <div class="produtos__card-container app__produto-descricao">
+          <p class="produto__id"><%- produto._id %></p>
+          <h3 class="produto__titulo"><%- produto.nome %></h3>
+          <p class="produto__descricao"><%- produto.descricao %></p>
+          <p class="produto__preco">R$ <%- produto.valor.toFixed(2) %></p>
+          <p class="produto__categoria"><%- produto.categoria %></p>
+        </div>
+
+        <h2 class="produto__titulo">• <%- produto.nome %></h2>
+
+        <div class="produto__container">
+          <div class="produto__container-imagem">
+            <img
+              src="<%- produto.img_url %>"
+              alt="<%- produto.nome %>"
+              class="produto__imagem app__produto-img"
+            />
+          </div>
+
+          <div class="produto__texto-container">
+            <h3 class="produto__subtitulo">
+              <span class="produto__subtitulo-highlight">Categoria:</span>
+
+              <span class="produto__categoria"><%- produto.categoria %></span>
+            </h3>
+
+            <p class="produto__texto produto__descricao">
+              <%- produto.descricao %>
+            </p>
+
+            <div class="produto__container-btn-preco">
+              <p class="produto__preco">R$ <%- produto.valor.toFixed(2) %></p>
+              <div class="produto__btns">
+                <button
+                  class="produtos__btn produtos__btn-secundario app__produto-favorito"
+                >
+                  <img
+                    src="../assets/images/icons/Coracao.png"
+                    alt="Favoritos"
+                  />
+                  <p class="produto__btn-texto">Favoritos</p>
+                </button>
+                <button class="produtos__btn app__produto-carrinho">
+                  <img
+                    src="../assets/images/icons/Carrinho.png"
+                    alt="Carrinho"
+                    class="produtos__btn-carrinho"
+                  />
+
+                  <p class="produto__btn-texto">Carrinho</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>

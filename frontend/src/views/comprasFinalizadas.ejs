@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora Charme cosméticos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles/pages/carrinho.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script type="module" src="../js/soAcessarPaginaLogado.js" defer></script>
+    <script type="module" src="../js/comprasFinalizadas.js" defer></script>
+  </head>
+  <body>
+    <%- include("partials/mobile_nav") %> <%- include("partials/header") %>
+
+    <main class="main">
+      <%- include('partials/mobile_logo') %>
+
+      <section class="carrinho">
+        <%- include("partials/popup_finalizado") %>
+        <h2 class="carrinho__titulo">• Compras finalizadas</h2>
+
+        <div class="carrinho__vazio">
+          <h3 class="carrinho__vazio-subtitulo">Não há compras finalizadas</h3>
+          <p class="carrinho__vazio-texto">
+            Vá para a página de <a href="/carrinho">carrinho</a> e finalize sua
+            compra
+          </p>
+        </div>
+        <div class="carrinho__formulario disable">
+          <ol class="carrinho__lista">
+            <li class="carrinho__lista-descricoes">
+              <div class="carrinho__lista-produto">Compra id</div>
+              <div class="carrinho__lista-quantidade">
+                Quantidade de produtos
+              </div>
+              <div class="carrinho__lista-preco">Preço</div>
+            </li>
+            <div class="append__list"></div>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>

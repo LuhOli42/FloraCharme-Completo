@@ -1,0 +1,120 @@
+.mobile-lista-menu__item:nth-child(3) a {
+  color: var(--fc-color-brand-950);
+}
+
+.tablet-lista-menu__item:nth-child(3) a {
+  color: var(--fc-color-brand-950);
+}
+
+.header li:nth-child(2) a {
+  color: var(--fc-color-brand-950);
+}
+
+.sobre-nos {
+  padding-top: 32px;
+}
+
+.sobre-nos__titulo {
+  font-family: var(--fc-font-type-primary);
+  font-size: var(--fc-font-size-heading-sm);
+  color: var(--fc-color-brand-950);
+  padding-bottom: 16px;
+}
+
+.sobre-nos__subtitulo {
+  font-family: var(--fc-font-type-primary);
+  padding: 16px 0;
+  text-indent: 0px;
+  text-align: center;
+  font-size: var(--fc-font-size-body-md);
+  color: var(--fc-color-brand-950);
+}
+
+.sobre-nos__subtitulo-highlight {
+  color: var(--fc-color-brand-900);
+}
+
+.sobre-nos__container-imagem {
+  height: calc((100vw - 40px) * 0.55);
+  padding-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sobre-nos__imagem {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sobre-nos__texto {
+  text-indent: 50px;
+  text-align: justify;
+  font-family: var(--fc-font-type-primary);
+  color: var(--fc-color-brand-950);
+  line-height: var(--fc-font-line-height-body);
+  font-size: var(--fc-font-size-body-sm);
+}
+
+.sobre-nos__texto:last-child {
+  padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .sobre-nos {
+    padding-top: 32px;
+  }
+
+  .sobre-nos__titulo {
+    font-size: var(--fc-font-size-heading-md);
+    padding-bottom: 24px;
+  }
+  .sobre-nos__subtitulo {
+    font-size: var(--fc-font-size-heading-xs);
+  }
+
+  .sobre-nos__container-imagem {
+    height: 354px;
+    width: 562px;
+  }
+
+  .sobre-nos__texto {
+    font-size: var(--fc-font-size-body-md);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .sobre-nos {
+    padding: 64px 16px 32px;
+  }
+
+  .sobre-nos__container {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+  }
+
+  .sobre-nos__titulo {
+    font-size: var(--fc-font-size-heading-xl);
+  }
+  .sobre-nos__subtitulo {
+    padding: 32px 0;
+    font-size: var(--fc-font-size-heading-sm);
+  }
+  .sobre-nos__container-imagem {
+    height: 484px;
+    width: 640px;
+  }
+
+  .sobre-nos__texto-container {
+    width: 60%;
+  }
+
+  .sobre-nos__texto {
+    font-size: var(--fc-font-size-body-lg);
+  }
+  .sobre-nos__texto:last-child {
+    padding: 0 0 32px;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora Charme cosméticos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles/pages/sobre-nos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <%- include("partials/mobile_nav") %> <%- include("partials/header") %>
+
+    <main class="main">
+      <%- include('partials/mobile_logo') %>
+
+      <section class="sobre-nos">
+        <h2 class="sobre-nos__titulo">• Sobre-nós</h2>
+
+        <div class="sobre-nos__container">
+          <div class="sobre-nos__container-imagem">
+            <img
+              src="../assets/images/produtos/brooke-lark-hp3MgIy-uEI-unsplash.jpg"
+              alt="Buque de flores feito com comésticos da marca"
+              class="sobre-nos__imagem"
+            />
+          </div>
+          <div class="sobre-nos__texto-container">
+            <h3 class="sobre-nos__subtitulo">
+              Florescendo
+              <span class="sobre-nos__subtitulo-highlight">Beleza</span>
+              Sustentável
+            </h3>
+
+            <p class="sobre-nos__texto">
+              Em um mundo onde a beleza se entrelaça com a consciência
+              ambiental, nasce Flora Charme, mais do que uma marca de
+              cosméticos, uma promessa de sustentabilidade e cuidado com a
+              natureza.
+            </p>
+            <p class="sobre-nos__texto">
+              Nossa jornada começa nos exuberantes campos floridos, onde a
+              inspiração floresce em cada pétala. Com um compromisso inabalável
+              com a preservação do meio ambiente, cada ingrediente é
+              cuidadosamente selecionado, cultivado de forma ética e colhido com
+              respeito à biodiversidade.
+            </p>
+            <p class="sobre-nos__texto">
+              Em cada frasco de nossos produtos, você encontrará não apenas a
+              essência da natureza, mas também o compromisso com práticas
+              sustentáveis. Nossas embalagens são projetadas com materiais
+              recicláveis e biodegradáveis, minimizando nosso impacto no planeta
+              e incentivando um ciclo de vida mais verde.
+            </p>
+            <p class="sobre-nos__texto">
+              Além disso, estamos empenhados em apoiar comunidades locais,
+              promovendo o comércio justo e oferecendo oportunidades de
+              crescimento econômico sustentável.
+            </p>
+            <p class="sobre-nos__texto">
+              Na jornada para a beleza sustentável, cada passo conta. Com Flora
+              Charme, não apenas celebramos a sua beleza, mas também a beleza do
+              mundo ao nosso redor. Juntos, florescemos em harmonia com a
+              natureza, cultivando um futuro mais belo e sustentável para todos.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>
