@@ -157,7 +157,7 @@
 
   .perfil__container {
     padding: 0 64px;
-
+    display: flex;
     gap: 32px;
   }
 
